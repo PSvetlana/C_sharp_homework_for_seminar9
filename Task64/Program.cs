@@ -20,11 +20,11 @@ void PrintPositiveIntegers(int numberN, int numberM)
 
 void FillPositiveIntegers(int numberN, int numberM)
 {
-    while (numberN < numberM)
+    if (numberM > numberN + 1)
     {
-        numberN++;
-        Console.Write($", {numberN} ");
+        FillPositiveIntegers(numberN, numberM - 1);
     }
+    Console.Write($", {numberM}");
 }
 
 Console.Write("Введите число N: ");
